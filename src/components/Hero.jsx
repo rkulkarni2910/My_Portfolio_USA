@@ -50,7 +50,7 @@ export default function Hero(){
             <p className="mt-3 text-slate-300 max-w-xl">Master’s CS student passionate about building scalable software and data-driven solutions</p>
 
             <div className="mt-4 flex flex-col sm:flex-row gap-3 items-center justify-start">
-              <a href="/resume.pdf" download className="inline-flex items-center gap-2 bg-accent text-black px-4 py-2 rounded-md font-medium hover:brightness-95 transition">Download Resume</a>
+              <a href="/resume.docx" download className="inline-flex items-center gap-2 bg-accent text-black px-4 py-2 rounded-md font-medium hover:brightness-95 transition">Download Resume</a>
               <a href="#contact" className="inline-flex items-center gap-2 border border-slate-700 px-4 py-2 rounded-md text-slate-200 hover:border-accent hover:text-accent transition">Contact Me</a>
             </div>
           </div>
