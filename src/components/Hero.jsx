@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 // Hero section with CTA buttons
 function HeroImage(){
   const [imgError, setImgError] = useState(false)
+  const [isFullScreen, setIsFullScreen] = useState(false)
   const sizeClass = "w-28 h-28 md:w-40 md:h-40"
 
   // try to load the image on mount (cache-bust to make sure replacement is picked up)
@@ -19,13 +20,29 @@ function HeroImage(){
   return (
     <>
       {!imgError ? (
-        <img
-          src="/profile.jpg"
-          alt="Rohan Kulkarni"
-          onError={() => setImgError(true)}
-          className={`${sizeClass} rounded-full object-cover object-center border-2 border-accent/20 shadow-lg`}
-          loading="lazy"
-        />
+        <>
+          <img
+            src="/profile.jpg"
+            alt="Rohan Kulkarni"
+            onError={() => setImgError(true)}
+            onClick={() => setIsFullScreen(true)}
+            className={`${sizeClass} rounded-full object-cover object-center border-2 border-accent/20 shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer`}
+            loading="lazy"
+          />
+          {isFullScreen && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 cursor-pointer" 
+              onClick={() => setIsFullScreen(false)}
+            >
+              <img
+                src="/profile.jpg"
+                alt="Rohan Kulkarni"
+                className="rounded-lg"
+                style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain' }}
+              />
+            </div>
+          )}
+        </>
       ) : (
         <div className={`${sizeClass} rounded-full bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center border-2 border-accent/20`}>
           <span className="text-white font-semibold text-xl">RK</span>
