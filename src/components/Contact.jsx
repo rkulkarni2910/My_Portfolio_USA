@@ -7,7 +7,7 @@ export default function Contact(){
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="p-4 bg-slate-900 border border-slate-800 rounded-md">
           <div className="text-slate-300">Email</div>
-          <div className="font-medium text-slate-100">Rohan.kulkarni@outlook.com</div>
+          <div className="font-medium text-slate-100">rohankulkarni29@outlook.com</div>
 
           <div className="mt-3 text-slate-300">Phone</div>
           <div className="font-medium text-slate-100">312 783 8212</div>
