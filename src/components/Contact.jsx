@@ -12,8 +12,9 @@ export default function Contact(){
           <div className="mt-3 text-slate-300">Phone</div>
           <div className="font-medium text-slate-100">312 783 8212</div>
 
-          <div className="mt-3">
+          <div className="mt-3 flex gap-4">
             <a className="text-accent hover:underline" href="https://www.linkedin.com/in/rohan-kulkarni2910" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="text-accent hover:underline" href="https://github.com/rkulkarni2910" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
 
